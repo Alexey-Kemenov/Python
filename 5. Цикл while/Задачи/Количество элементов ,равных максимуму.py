@@ -6,7 +6,7 @@ while n != 0:
         max = n
         i = 0
     if n == max:
-    i = i + 1
+        i = i + 1
     n = int(input())
 
 print(f"кол-во:{i}")
