@@ -12,8 +12,8 @@ for i in range(n):
     row = list(map(int, input().split()))
     matrix.append(row)
 if is_symmetric(matrix):
-    print("yes")
+    print("YES")
 else:
-    print("no")
+    print("NO")
 
 
