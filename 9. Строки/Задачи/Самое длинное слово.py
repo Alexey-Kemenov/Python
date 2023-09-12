@@ -1,4 +1,7 @@
-s = input()
+word = max(input().split(), key=len)
+print(word)
+print(len(word))
+"""
 word = ''
 s = s.split()
 for c in s:
@@ -6,5 +9,6 @@ for c in s:
         word = c
 print(word)
 print(len(word))
+"""
 
 
