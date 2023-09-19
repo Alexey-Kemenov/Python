@@ -1,16 +1,10 @@
 s = input()
-x = ''
+alph = '0123456789ABCDEF'
 i = 0
 n = len(s)
-A = 10
-B = 11
-C = 12
-D = 13
-E = 14
-F = 15
+x = 0
 for c in s:
-
-        x += (s[c] * 16 ** n)
+    x += (s[c] * 16 ** n)
 i += 1
 n -= 1
 
