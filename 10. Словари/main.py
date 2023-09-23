@@ -35,7 +35,7 @@ text = input()
 stat = dict()
 for c in text:
     с = c.lower()
-    if (c.isalpha()):
+    if c.isalpha():
         if c in stat:
             stat[c] += 1
         else:
