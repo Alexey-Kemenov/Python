@@ -2,16 +2,16 @@ words = dict()
 n = int(input())
 count = 0
 while n > 0:
-    s = input()
+    s = input().replace("-", "").replace(',', '').split()
     n -= 1
-    s = s.replace("-", "")
-    s = s.split()
-    for c in s[1:]:
-        words[c] = s[0]
+    for word in s[1:]:
+        if word in words:
+            words[word].append(s[0])
+        else:
+            words[word] = [s[0]]
 
+words = dict(sorted(list(words.items())))
+
+print(len(words))
 for key, value in words.items():
-    #if value != value:
-        print(f'{key} - {value, value}')
-    count += 1
-    print(f'{key} - {value}')
-print(count)
+    print(f'{key} - {", ".join(sorted(value))}')
