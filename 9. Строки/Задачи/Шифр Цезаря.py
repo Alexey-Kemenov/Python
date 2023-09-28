@@ -12,37 +12,30 @@
 
 
 def encode(n):
+    e = ''
+    alph = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя'
     for i in n:
         a = alph.find(i)
         b = a + step
-    return b
+        e += alph[b]
+    return e
 
 
 def decode(n):
-    for i in n:
-        a = alph.find(i)
-        d = a - step
+    d = ''
+    alph = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    for j in n:
+        a = alph.find(j)
+        b = a - step
+        d += alph[b]
     return d
 
-
-alph = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-
-s = input()
-y = input()
-step = 3
-
-shifr = ''
-original = ''
-e = 0
-o = 0
-for c in s:
-    if encode(c):
-        e = encode(c)
-        shifr += alph[e]
-print(shifr)
-
-"""for j in y:
-    if decode(j):
-        o = decode(j)
-        original -= alph[o]
-print(original)"""
+s = input('ENCODE:')
+y = input('DECODE:')
+step = int(input())
+if y == '':
+    s = encode(s)
+    print(s)
+if s == '':
+    y = decode(y)
+    print(y)
